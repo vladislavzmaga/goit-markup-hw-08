@@ -1,0 +1,11 @@
+.adress {
+  font-family: inherit;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  transition: var(--time-animation) var(--timing-animation);
+  &:hover,
+  &:focus {
+    color: var(--active-link-color);
+  }
+}

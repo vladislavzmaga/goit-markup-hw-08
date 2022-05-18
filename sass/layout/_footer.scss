@@ -1,0 +1,143 @@
+.footer {
+  background-color: var(--footer-background-color);
+  padding-bottom: 60px;
+  padding-top: 60px;
+  .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+/* footer-link */
+
+.footer-link {
+  &.logo {
+  }
+  &__logo-top {
+    display: block;
+    color: var(--active-link-color);
+    margin-bottom: 20px;
+  }
+
+  &__logo-bottom {
+    color: var(--title-link-color);
+  }
+}
+
+/* footer-list */
+
+.footer-list {
+  &.adress {
+  }
+  &__adress {
+    line-height: 1.71;
+    display: block;
+    color: var(--title-link-color);
+    margin-bottom: 9px;
+  }
+  &__mail {
+    line-height: 1.71;
+    display: block;
+    color: var(--footer-mail-tel-color);
+    margin-bottom: 9px;
+  }
+  &__tel {
+    line-height: 1.71;
+    color: var(--footer-mail-tel-color);
+  }
+}
+
+/* footer-icon */
+
+.footer-icon {
+  margin-left: 70px;
+  &__title {
+    @include font(null, 1.14, 700);
+    text-transform: uppercase;
+    color: var(--title-link-color);
+    margin-bottom: 20px;
+  }
+}
+
+/* footer-soc-list */
+
+.footer-soc-list {
+  display: flex;
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--title-link-color);
+    transition: var(--time-animation) var(--timing-animation);
+    &:hover,
+    &:focus {
+      background-color: var(--active-link-color);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+/* footer-subscription */
+
+.footer-subscription {
+  margin-right: 0;
+  margin-left: auto;
+  &__title {
+    @include font(null, 1.14, 700);
+    text-transform: uppercase;
+    color: var(--title-link-color);
+    margin-bottom: 20px;
+  }
+}
+
+/* footer-form */
+
+.footer-form {
+  &__input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 16px;
+    outline: none;
+    transition: var(--time-animation) var(--timing-animation);
+    &:focus {
+      border-color: var(--active-link-color);
+      background-color: transparent;
+      color: var(--title-link-color);
+    }
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.footer-form-btn {
+  &.big-btn {
+  }
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding: 10px 62px 10px 29px;
+  &__icon {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--title-link-color);
+  }
+}

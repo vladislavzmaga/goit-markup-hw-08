@@ -1,0 +1,5 @@
+.logo {
+  font-family: "Raleway";
+  @include font(26px, 1.19, 700);
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,179 @@
+// backdrop
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: var(--time-animation) var(--timing-animation);
+  &__modal {
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--title-link-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transition: transform 250ms;
+    transform: translate(-50%, -50%) scale(1);
+    .backdrop .is-hidden & {
+      transform: scale(0.2);
+    }
+  }
+  &__title {
+    @include font(20px, 1.15, 700);
+    text-align: center;
+    color: var(--bottom-title-color);
+    margin-bottom: 12px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* modal-close-btn */
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--time-animation) var(--timing-animation);
+  &:hover,
+  &:focus {
+    fill: var(--active-link-color);
+  }
+  &__icon {
+    color: #000;
+  }
+}
+
+/* modal-field  */
+
+.modal-field {
+  margin-bottom: 10px;
+  &__label {
+    @include font(12px, 1.17, null);
+    letter-spacing: 0.01em;
+    color: var(--header-mail-tel-body-color);
+    margin-bottom: 4px;
+    display: block;
+  }
+  &__text {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include font(12px, 1.17, null);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    resize: none;
+    margin-bottom: 20px;
+    outline: none;
+    &:focus {
+      border-color: var(--active-link-color);
+      transition: var(--time-animation) var(--timing-animation);
+    }
+  }
+}
+
+/* modal-wrap */
+
+.modal-wrap {
+  position: relative;
+  &__input {
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: var(--time-animation) var(--timing-animation);
+    &:focus {
+      border-color: var(--active-link-color);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: var(--time-animation) var(--timing-animation);
+    .modal-wrap__input:focus + & {
+      fill: var(--active-link-color);
+    }
+  }
+}
+
+/* check-text */
+
+.check-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1.71;
+  color: var(--header-mail-tel-body-color);
+  margin-bottom: 30px;
+  &__icon {
+    fill: transparent;
+    .modal-field__check:checked + .check-text & {
+      fill: var(--title-link-color);
+    }
+  }
+  & span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000;
+    border-radius: 2px;
+    margin-right: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--time-animation) var(--timing-animation);
+    .modal-field__check:checked + & {
+      border: none;
+      background-color: var(--active-link-color);
+    }
+    .modal-field__check:focus + & {
+      border-color: var(--active-link-color);
+    }
+  }
+  &__link {
+    font-family: inherit;
+    @include font(14px, 1.71, 400);
+    letter-spacing: 0.03em;
+    color: var(--active-link-color);
+  }
+}
+
+/* modal-form */
+
+.modal-form__btn {
+  &.big-btn {
+  }
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
