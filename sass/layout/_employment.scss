@@ -1,6 +1,12 @@
 .employment {
   padding-top: 0;
   padding-bottom: 94px;
+  margin: 0 auto;
+  display: none;
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    display: block;
+  }
   &__title {
     @include font(36px, 1.17, 700);
     text-align: center;

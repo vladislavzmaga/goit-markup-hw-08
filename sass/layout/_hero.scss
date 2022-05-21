@@ -32,13 +32,18 @@
   }
   &__title {
     margin: 0 auto;
-    width: 360px;
     @include font(26px, 1.61, 900);
+    width: 280px;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--title-link-color);
     margin-bottom: 30px;
+    @media screen and (min-width: 480px) {
+      max-width: 480px;
+
+      width: 360px;
+    }
     @media screen and (min-width: 1200px) {
       max-width: 1200px;
       width: 696px;
