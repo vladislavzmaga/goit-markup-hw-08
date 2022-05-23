@@ -4,6 +4,7 @@
   font-size: 14px;
   letter-spacing: 0.03em;
   transition: var(--time-animation) var(--timing-animation);
+  color: var(--header-mail-tel-body-color);
   &:hover,
   &:focus {
     color: var(--active-link-color);

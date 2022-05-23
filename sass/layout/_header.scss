@@ -101,7 +101,6 @@
   &__mail,
   &__tel {
     display: flex;
-    color: var(--header-mail-tel-body-color);
 
     max-width: 768px;
     padding: 0;
@@ -124,5 +123,132 @@
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+  }
+}
+
+// menu-open-btn
+
+.menu-open-btn {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  padding-top: 10px;
+  cursor: pointer;
+  fill: var(--bottom-title-color);
+  transition: var(--time-animation) var(--timing-animation);
+  &:hover,
+  &:focus {
+    fill: var(--active-link-color);
+  }
+  &__icon {
+  }
+}
+
+// mob-menu
+
+.mob-menu {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  width: 100vw;
+  max-width: 480px;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  // @media screen and (min-width: 768px) {
+  //   max-width: 768px;
+  //   display: none;
+  // }
+}
+
+// menu-close-btn
+
+.menu-close-btn {
+  position: absolute;
+  display: block;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--bottom-title-color);
+  transition: var(--time-animation) var(--timing-animation);
+  &:hover,
+  &:focus {
+    fill: var(--active-link-color);
+  }
+  &__icon {
+  }
+}
+
+// mob-menu-list
+
+.mob-menu-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  &__link {
+    @include font(40px, 1.18, 500);
+    color: var(--bottom-title-color);
+    transition: var(--time-animation) var(--timing-animation);
+    &:hover,
+    &:focus {
+      color: var(--active-link-color);
+    }
+  }
+  &__link--active {
+    color: var(--active-link-color);
+  }
+}
+
+// mob-menu-adress
+
+.mob-menu-adress {
+  &__item {
+  }
+  &__mail {
+    display: block;
+    @include font(24px, 1.17, 500);
+    margin-bottom: 64px;
+  }
+  &__tel {
+    display: block;
+    @include font(34px, 1.18, 500);
+    margin-bottom: 32px;
+  }
+}
+
+// mob-menu-soc-list
+
+.mob-menu-soc-list {
+  display: flex;
+  padding-right: -10px;
+  padding-left: -10px;
+
+  &__item {
+  }
+  &__link {
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
