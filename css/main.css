@@ -87,6 +87,7 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   transition: var(--time-animation) var(--timing-animation);
+  overflow-y: auto;
 }
 .backdrop__modal {
   position: absolute;
@@ -109,6 +110,11 @@ body {
     max-width: 480px;
     width: 450px;
     min-height: 609px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .backdrop__modal {
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -494,28 +500,34 @@ body {
   top: 0;
   background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
   transition: var(--time-animation) var(--timing-animation);
-  overflow-y: scroll;
 }
 .mob-menu .container {
   display: flex;
   flex-direction: column;
   padding: 0;
   height: 100%;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-start;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu .container {
+    margin-left: 0;
+  }
 }
 .mob-menu.is-hidden {
   transform: translateX(50%);
 }
 @media screen and (min-width: 480px) {
   .mob-menu {
-    max-width: 480px;
+    width: 100vw;
     height: 100vh;
   }
 }
@@ -572,10 +584,18 @@ body {
 }
 .mob-menu-adress__tel {
   display: block;
-  font-size: 34px;
-  line-height: 1.18;
+  font-size: 24px;
+  line-height: 1.17;
   font-weight: 500;
   margin-bottom: 32px;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu-adress__tel {
+    max-width: 480px;
+    font-size: 34px;
+    line-height: 1.18;
+    font-weight: 500;
+  }
 }
 
 .mob-menu-soc-list {

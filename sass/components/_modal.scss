@@ -7,6 +7,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   transition: var(--time-animation) var(--timing-animation);
+  overflow-y: auto;
   &__modal {
     position: absolute;
     width: 90vw;
@@ -20,6 +21,7 @@
     left: 50%;
     transition: var(--time-animation) var(--timing-animation);
     transform: translate(-50%, -50%) scale(1);
+
     .backdrop.is-hidden & {
       transform: scale(0.2);
     }
@@ -27,6 +29,9 @@
       max-width: 480px;
       width: 450px;
       min-height: 609px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
     }
     @media screen and (min-width: 1200px) {
       max-width: 1200px;

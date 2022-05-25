@@ -306,12 +306,25 @@
               </ul>
             </li>
             <li class="command-list__item">
-              <img
-                src="images/olha.jpg"
-                alt="Ольга Репина"
-                width="270"
-                class="command-list__img"
-              />
+              <picture>
+                <source
+                  srcset="./images/olha.jpg 1x, ./images/olha-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/olha-tab.jpg 1x, ./images/olha-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/olha-mob.jpg 1x, ./images/olha-mob-2x.jpg 2x"
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="images/olha-mob.jpg"
+                  alt="Игорь Демьяненко"
+                  class="command-list__img"
+                />
+              </picture>
               <h3 class="command-list__title">Ольга Репина</h3>
               <p lang="en" class="command-list__text">Frontend Developer</p>
               <ul class="command-soc-list list">
@@ -346,12 +359,31 @@
               </ul>
             </li>
             <li class="command-list__item">
-              <img
-                src="images/nikolay.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                class="command-list__img"
-              />
+              <picture>
+                <source
+                  srcset="./images/nikolay.jpg 1x, ./images/nikolay-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/nikolay-tab.jpg    1x,
+                    ./images/nikolay-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/nikolay-mob.jpg    1x,
+                    ./images/nikolay-mob-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="images/nikolay-mob.jpg"
+                  alt="Игорь Демьяненко"
+                  class="command-list__img"
+                />
+              </picture>
               <h3 class="command-list__title">Николай Тарасов</h3>
               <p lang="en" class="command-list__text">Marketing</p>
               <ul class="command-soc-list list">
@@ -386,12 +418,31 @@
               </ul>
             </li>
             <li class="command-list__item">
-              <img
-                src="images/mikhail.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                class="command-list__img"
-              />
+              <picture>
+                <source
+                  srcset="./images/mikhail.jpg 1x, ./images/mikhail-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikhail-tab.jpg    1x,
+                    ./images/mikhail-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikhail-mob.jpg    1x,
+                    ./images/mikhail-mob-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="images/mikhail-mob.jpg"
+                  alt="Игорь Демьяненко"
+                  class="command-list__img"
+                />
+              </picture>
               <h3 class="command-list__title">Михаил Ермаков</h3>
               <p lang="en" class="command-list__text">UI Designer</p>
               <ul class="command-soc-list list">

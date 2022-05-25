@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Портфолио</title>
   </head>
-  <body class="no-scroll">
+  <body>
     <header class="header">
       <div class="container">
         <nav class="header-nav">
@@ -29,14 +29,12 @@
           >
           <ul class="header-list list">
             <li class="header-list__item">
-              <a
-                href="./index.html"
-                class="header-list__link link "
-                >Студия</a
-              >
+              <a href="./index.html" class="header-list__link link">Студия</a>
             </li>
             <li class="header-list__item">
-              <a href="" class="header-list__link link header-list__link--active"
+              <a
+                href=""
+                class="header-list__link link header-list__link--active"
                 >Портфолио</a
               >
             </li>
@@ -85,14 +83,12 @@
           <div class="mob-menu-top">
             <ul class="mob-menu-list list">
               <li class="mob-menu-list__item">
-                <a
-                  href="index.html"
-                  class="mob-menu-list__link link "
-                  >Студия</a
-                >
+                <a href="index.html" class="mob-menu-list__link link">Студия</a>
               </li>
               <li class="mob-menu-list__item">
-                <a href="l" class="mob-menu-list__link link mob-menu-list__link--active"
+                <a
+                  href="l"
+                  class="mob-menu-list__link link mob-menu-list__link--active"
                   >Портфолио</a
                 >
               </li>
@@ -137,7 +133,6 @@
       </div>
     </header>
     <main>
-    <main>
       <section class="employmen">
         <div class="container">
           <h1 class="employmen__title visually-hidden">Чем мы занимаемся</h1>
@@ -168,12 +163,31 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/imgmin.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgmin.jpg 1x, ./images/imgmin-2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgmin-tab.jpg    1x,
+                        ./images/imgmin-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgmin-mob.jpg    1x,
+                        ./images/imgmin-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/imgmin-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -189,12 +203,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img1min.jpg"
-                    alt="баскетбол"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img1min.jpg    1x,
+                        ./images/img1min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img1min-tab.jpg    1x,
+                        ./images/img1min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img1min-mob.jpg    1x,
+                        ./images/img1min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img1min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -212,12 +248,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img2min.jpg"
-                    alt="логотип"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img2min.jpg    1x,
+                        ./images/img2min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img2min-tab.jpg    1x,
+                        ./images/img2min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img2min-mob.jpg    1x,
+                        ./images/img2min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img2min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -235,12 +293,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img3min.jpg"
-                    alt="наушники"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img3min.jpg    1x,
+                        ./images/img3min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img3min-tab.jpg    1x,
+                        ./images/img3min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img3min-mob.jpg    1x,
+                        ./images/img3min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img3min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -258,12 +338,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img4min.jpg"
-                    alt="коробочки"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img4min.jpg    1x,
+                        ./images/img4min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img4min-tab.jpg    1x,
+                        ./images/img4min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img4min-mob.jpg    1x,
+                        ./images/img4min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img4min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -281,12 +383,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img5min.jpg"
-                    alt="монитор"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img5min.jpg    1x,
+                        ./images/img5min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img5min-tab.jpg    1x,
+                        ./images/img5min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img5min-mob.jpg    1x,
+                        ./images/img5min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img5min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -304,12 +428,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img6min.jpg"
-                    alt="книга"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img6min.jpg    1x,
+                        ./images/img6min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img6min-tab.jpg    1x,
+                        ./images/img6min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img6min-mob.jpg    1x,
+                        ./images/img6min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img6min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -327,12 +473,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img7min.jpg"
-                    alt="бирка"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img7min.jpg    1x,
+                        ./images/img7min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img7min-tab.jpg    1x,
+                        ./images/img7min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img7min-mob.jpg    1x,
+                        ./images/img7min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img7min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -350,12 +518,34 @@
             <li class="employmen-list-bottom__item">
               <a href="" class="employmen-list-bottom__link link">
                 <div class="employmen-inner">
-                  <img
-                    src="./images/img8min.jpg"
-                    alt="ноутбук2"
-                    width="370"
-                    class="employmen-inner__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img8min.jpg    1x,
+                        ./images/img8min-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img8min-tab.jpg    1x,
+                        ./images/img8min-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/img8min-mob.jpg    1x,
+                        ./images/img8min-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="images/img8min-mob.jpg"
+                      alt="ноутбук"
+                      class="employmen-inner__img"
+                    />
+                  </picture>
                   <p class="employmen-inner__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
